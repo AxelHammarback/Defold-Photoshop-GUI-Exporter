@@ -2,6 +2,8 @@
 
 This page contains information about the Photoshop GUI Exporter extension panel – what it does, how it works, and how you can use it to speed up the process of bringing a GUI design+layout from Photoshop into Defold.
 
+---
+
 ## About
 
 This extension makes it easier to take a GUI design and layout from Photoshop and turn it into a GUI scene (.gui) in Defold.
@@ -11,6 +13,8 @@ Information from each layer – such as name, size or position – will be expor
 ![Overview of the GUI exporter panel](images/1-overview.jpg)
 
 *(Overview of the GUI exporter panel)*
+
+---
 
 ## Lingo
 
@@ -32,15 +36,17 @@ Information from each layer – such as name, size or position – will be expor
 
 **ZXP** – Installation file for Adobe extensions.
 
+---
+
 ## Installation
 
 **Panel is supported in Adobe Photoshop CC and later only.**
 
 1. Make sure that you have an extension installer on your computer <sup>[1]</sup>.
 
-2. Download the extension panel (**ZXP**) from download link at the top of this page.
+2. Download the attachment from download link at the top of this page.
 
-3. Save your work and close down Photoshop.
+3. If Photoshop is open; save your work and close down Photoshop.
 
 4. Use your extension installer to install the ZXP file.
 
@@ -51,6 +57,8 @@ Information from each layer – such as name, size or position – will be expor
 Next step is to download a custom one: Anastasiy's Extension Manager – [http://install.anastasiy.com/](http://install.anastasiy.com/)
 
 If you have troubles with Anastasiy's you can try this: ZXPInstaller – [http://zxpinstaller.com/](http://zxpinstaller.com/)
+
+---
 
 ## Getting started
 
@@ -99,6 +107,8 @@ main/images/
 Also please note that the exporter will generate new files on disk by default, but you can choose to tell the exporter that you do not want to overwrite the old atlas file by making sure the last switch (Append to existing atlas file?) is set to **YES**.
 
 Because of the ways that Photoshop and Defold differs in their representation of layers/nodes, there are certain things you need to setup within your workfile when it comes to certain things. Nothing to worry about really, just keep in mind that some special rules applies if you want to setup parented nodes or have make several nodes/layers use the same resource on the atlas. These "rules" are described below under **"Parenting"** and **"Shared resource"**.
+
+---
 
 ## Parenting and Shared resources
 
@@ -150,6 +160,8 @@ If we have several clones of the layer "kirby", we append this suffix to their n
 
 *(How to avoid duplicate image resources on an atlas)*
 
+---
+
 ## Limitations
 
 Because of the big differences between Defold nodes and Photoshop layers, there are some limitations that you need to be aware of.
@@ -171,6 +183,8 @@ Support for multiple atlas files will not be included in this first version, but
 There is no support for Smart objects.
 
 Also keep in mind that this is an **EXPORTER**. Changes done to your GUI inside of Defold will not affect your work inside of Photoshop. In the future it is entirely possible that some two-way communication can be made, but for now treat this tool as a one-way-only exporter.
+
+---
 
 ## Technical
 This section contains technical details on the exporter and how it works – it is primarily written for Technical Artists and as such, no lingo descriptions will appear.
