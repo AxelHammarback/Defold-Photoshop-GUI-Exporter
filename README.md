@@ -198,5 +198,7 @@ All layer/node properties are saved for each individual layer. LOTS of cool stuf
 
 **Exporting:** The exporting is done in three steps: **First** the metadata is read and compiled into a file string (JSON), **Then** the atlas, font and gui files are written to disk. **Last**, the tool will cycle through all layers one by one, duplicating the document and trim away alpha pixels around them before finally saving the image file (PNG) on disk.
 
+---
+
 ## Credits
 This extension is made by [Martin Dahlin](http://martin.dahlin.net/).
