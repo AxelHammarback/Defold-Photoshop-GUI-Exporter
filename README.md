@@ -8,7 +8,7 @@ This extension makes it easier to take a GUI design and layout from Photoshop an
 
 Information from each layer – such as name, size or position – will be exported to file format that Defold understands, and will be represented as nodes in the GUI scene graph. Additional data such as pivot positions or slice9 properties are stored as per-layer metadata **which means that every layer will have it's own unique properties** – just like Defold nodes does. These properties are then displayed on and managed by the extension panel inside Photoshop.
 
-![Overview of the GUI exporter panel](https://github.com/AxelHammarback/Defold-Photoshop-GUI-Exporter/blob/master/images/1-overview.jpg)
+![Overview of the GUI exporter panel](images/1-overview.jpg)
 
 *(Overview of the GUI exporter panel)*
 
@@ -80,7 +80,7 @@ Usually this folder is located in the Defold installation under something like
 
 A trick you can do is to open up your Defold project and then right-click the *game.project* file the Project Explorer and choose *Show in Explorer* (Win) or *Show in Finder* (OSX). A window will open up in the Explorer/Finder and from there just copy the path that goes to the /main/ folder.
 
-![Show Defold project in finder](https://github.com/AxelHammarback/Defold-Photoshop-GUI-Exporter/blob/master/images/2-finder.png)
+![Show Defold project in finder](images/2-finder.png)
 
 **Files and Sub-folders**
 
@@ -112,7 +112,7 @@ Photoshop on the other hand has no way of parenting layers to each other: you on
 
 In order to tell the GUI exporter about our parent-child relationships we will use Layer sets (groups) and rename these to the same name as the parent layer. To the right is an example of how to setup your workfile so that the exporter takes these relationships into account. Here we are telling the exporter that the layer kirby is parented under the layer bomberman. Now this applies regardless of where the bomberman -layer set is located, so in order to avoid confusion: Always place the layer set below the actual layer it is referring to.
 
-![How to make the exporter understand parenting](https://github.com/AxelHammarback/Defold-Photoshop-GUI-Exporter/blob/master/images/3-parenting.png)
+![How to make the exporter understand parenting](images/3-parenting.png)
 
 *How to make the exporter understand parenting*
 
@@ -134,7 +134,7 @@ By default the exporter will go through every art layer and process it to be an 
 
 In the example to the right, we have three individual "kirby" -layers. Each one of these will be written as a unique entity in the atlas file, meaning we end up with duplicates: we will get three identical Kirby -characters. This is bad – we want atlases to be as small as possible!
 
-![Layers panel in Photoshop – make sure to not have identically named layers](https://github.com/AxelHammarback/Defold-Photoshop-GUI-Exporter/blob/master/images/4-shared.jpg)
+![Layers panel in Photoshop – make sure to not have identically named layers](images/4-shared.jpg)
 
 *(Using several identical layers like this will result in duplicates on the atlas!)*
 
@@ -146,7 +146,7 @@ If we have several clones of the layer "kirby", we append this suffix to their n
 
 ...so that we get: kirby2_kirby_ , kirby3_kirby_ , and so on (if we have more dupes). The picture below depicts a correct setup!
 
-![How to avoid duplicate image resources on an atlas](https://github.com/AxelHammarback/Defold-Photoshop-GUI-Exporter/blob/master/images/5-shared2.jpg)
+![How to avoid duplicate image resources on an atlas](images/5-shared2.jpg)
 
 *(How to avoid duplicate image resources on an atlas)*
 
