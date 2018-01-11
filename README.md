@@ -114,7 +114,7 @@ Because of the ways that Photoshop and Defold differs in their representation of
 
 Special rules applies if you want to setup a layer to be a parent of another, or if you want to setup multiple layers to use the same image resource on your atlas.
 
-### **Parenting**
+### Parenting
 
 In Defold you can setup parent-child -relationship between nodes by dragging and dropping one onto another.
 
@@ -126,7 +126,7 @@ In order to tell the GUI exporter about our parent-child relationships we will u
 
 *How to make the exporter understand parenting*
 
-### **Layer groups**
+### Layer groups
 
 Important to know here is that you can still use layer groups like normal. Basically there are two "modes":
 
@@ -138,7 +138,7 @@ Important to know here is that you can still use layer groups like normal. Basic
 
 Be careful with the names. If the exporter finds a layer set name that does not correspond with a layer name, that layer set will be merged and exported as an individual node.
 
-### **Shared resources**
+### Shared resources
 
 By default the exporter will go through every art layer and process it to be an individual node, even if some or all of the layers have identical pixel information. So in order to not get outrageous atlases, we need to tell the exporter when we want an image resource to be assigned to multiple layers.
 
@@ -197,3 +197,6 @@ All layer/node properties are saved for each individual layer. LOTS of cool stuf
 **Event listener:** The metadata is retrieved and the panel UI controls are updated by a callback function that is executed by an event listener. The event listener will fire off every time there is a new layer selection. It is possible to have multiple event listeners listening in on several different events, but this a bit trickier to implement. If interested please see: https://forums.adobe.com/thread/1934925
 
 **Exporting:** The exporting is done in three steps: **First** the metadata is read and compiled into a file string (JSON), **Then** the atlas, font and gui files are written to disk. **Last**, the tool will cycle through all layers one by one, duplicating the document and trim away alpha pixels around them before finally saving the image file (PNG) on disk.
+
+## Credits
+This extension is made by [Martin Dahlin](http://martin.dahlin.net/).
