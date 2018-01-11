@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ExtensionManifest Version="5.0" ExtensionBundleId="com.king.defoldGuiExporter" ExtensionBundleVersion="1.1.0" ExtensionBundleName="Defold GUI Exporter">
+    <Author>
+        <![CDATA[Martin Dahlin]]>
+    </Author>
+    <ExtensionList>
+        <Extension Id="com.king.defoldGuiExporter" Version="1.1" />
+    </ExtensionList>
+    <ExecutionEnvironment>
+        <HostList>
+            <!-- Photoshop -->
+            <Host Name="PHSP" Version="14.0" />
+            <Host Name="PHXS" Version="14.0" />
+        </HostList>
+        <LocaleList>
+            <Locale Code="All" />
+        </LocaleList>
+        <RequiredRuntimeList>
+            <RequiredRuntime Name="CSXS" Version="6.0" />
+        </RequiredRuntimeList>
+    </ExecutionEnvironment>
+    <DispatchInfoList>
+        <Extension Id="com.king.defoldGuiExporter">
+            <DispatchInfo>
+                <Resources>
+                <MainPath>./index.html</MainPath>
+                <ScriptPath>./jsx/main.jsx</ScriptPath>
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>Panel</Type>
+                    <Menu>Defold GUI Exporter</Menu>
+                    <Geometry>
+                        <Size>
+                            <Height>770</Height>
+                            <Width>220</Width>
+                        </Size>
+                        <MinSize>
+                            <Height>400</Height>
+                            <Width>220</Width>
+                        </MinSize>
+                        <!--
+                        <MaxSize>
+                            <Height>550</Height>
+                            <Width>400</Width>
+                        </MaxSize>
+                        -->
+                    </Geometry>
+                    <Icons>
+                        <Icon Type="Normal">./icons/iconNormal.png</Icon>
+                        <Icon Type="RollOver">./icons/iconRollover.png</Icon>
+                        <Icon Type="Disabled">./icons/iconDisabled.png</Icon>
+                        <Icon Type="DarkNormal">./icons/iconDarkNormal.png</Icon>
+                        <Icon Type="DarkRollOver">./icons/iconDarkRollover.png</Icon>
+                    </Icons>
+                </UI>
+            </DispatchInfo>
+        </Extension>
+    </DispatchInfoList>
+</ExtensionManifest>

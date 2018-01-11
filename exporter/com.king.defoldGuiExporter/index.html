@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link id="topcoat" rel="stylesheet"/><!-- Topcoat original CSS -->
+<link id="topcoat-host" rel="stylesheet" href="css/topcoat-host.css"/><!-- Topcoat overrides -->
+<link rel="stylesheet" href="css/style.css"/><!-- CSS of this panel -->
+<title></title>
+</head>
+
+<body>
+<div id="content">
+
+    <div class="row no-margin-top height23"><!-- Node properties -->
+        <div class="col2">
+            <p class="title-font title-nodes color-sunny-yellow">Node Properties</p>
+        </div>
+        <!--
+        <div class="col1">
+            <img src="img/KingBrand_masterLogo_60x41.png" id="kingLogo">
+        </div>
+        -->
+    </div>
+
+    <!-- Inherit alpha - Obsolete. Inherit alpha will be ON by default!
+    <div class="row height30"> // height36 now - 30 before
+        <div class="col1">
+            <p>Inherit alpha:</p>
+        </div>
+        <div class="col2"> 
+            <div class="col50">
+                <label class="topcoat-switch">
+                    <input id="alphaCheckbox" type="checkbox" class="topcoat-switch__input" checked>
+                    <div class="topcoat-switch__toggle"></div>
+                </label>
+            </div>
+            <div class="col50">
+                <img src="img/KingBrand_masterLogo_60x41.png" id="kingLogo">
+            </div>
+        </div>
+    </div>
+    -->
+
+    <div class="row"><!-- Pivot and anchor icons -->
+        <div class="col1">
+            <p>Pivot / Anchor:</p>
+        </div>
+        <div class="col2">
+            <div class="col50">
+                <table><!-- Pivot position -->
+                <tr>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselTL.png" id="topLeftButtonP" class="pivot-button">
+                    </button></td>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselT.png" id="topButtonP" class="pivot-button">
+                    </button></td>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselTR.png" id="topRightButtonP" class="pivot-button">
+                    </button></td>
+                </tr>
+                <tr>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselL.png" id="leftButtonP" class="pivot-button">
+                    </button></td>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/pivotSelC.png" id="centerButtonP" class="pivot-button">
+                    </button></td>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselR.png" id="rightButtonP" class="pivot-button">
+                    </button></td>
+                </tr>
+                <tr>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselBL.png" id="bottomLeftButtonP" class="pivot-button">
+                    </button></td>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselB.png" id="bottomButtonP" class="pivot-button">
+                    </button></td>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselBR.png" id="bottomRightButtonP" class="pivot-button">
+                    </button></td>
+                </tr>
+                </table>
+            </div>
+            <div class="col50">
+                <table><!-- Anchor position -->
+                <tr>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselTL.png" id="topLeftButtonA" class="pivot-button">
+                    </button></td>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselT.png" id="topButtonA" class="pivot-button">
+                    </button></td>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselTR.png" id="topRightButtonA" class="pivot-button">
+                    </button></td>
+                </tr>
+                <tr>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselL.png" id="leftButtonA" class="pivot-button">
+                    </button></td>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/anchorSelC.png" id="centerButtonA" class="pivot-button">
+                    </button></td>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselR.png" id="rightButtonA" class="pivot-button">
+                    </button></td>
+                </tr>
+                <tr>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselBL.png" id="bottomLeftButtonA" class="pivot-button">
+                    </button></td>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselB.png" id="bottomButtonA" class="pivot-button">
+                    </button></td>
+                    <td><button class="topcoat-icon-button--large pivot-button">
+                        <img src="img/unselBR.png" id="bottomRightButtonA" class="pivot-button">
+                    </button></td>
+                </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row"><!-- Alpha blend mode -->
+        <div class="col1">
+            <p>Blend mode:</p>
+        </div>
+        <div class="col2">
+            <select id="blendmodeMenu" class="topcoat-select">
+                <option value="BLEND_MODE_ALPHA" selected>ALPHA</option>
+                <option value="BLEND_MODE_ADD">ADD</option>
+                <option value="BLEND_MODE_MULT">MULTIPLY</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row"><!-- Adjust mode -->
+        <div class="col1">
+            <p>Adj. mode:</p>
+        </div>
+        <div class="col2">
+            <select id="adjustMenu" class="topcoat-select">
+                <option value="ADJUST_MODE_FIT" selected>FIT</option>
+                <option value="ADJUST_MODE_ZOOM">ZOOM</option>
+                <option value="ADJUST_MODE_STRETCH">STRETCH</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row"><!-- Layer -->
+        <div class="col1">
+            <p>Layer:</p>
+        </div>
+        <div class="col2">
+            <input class="topcoat-text-input width100" id="layerField" placeholder="none" type="text" value="">
+        </div>
+    </div>
+    
+    <div class="row"><!-- Clipping -->
+        <div class="col1">
+            <p>Clipping:</p>
+        </div>
+        <div class="col2">
+            <label class="topcoat-radio-button">
+                <input id="clippingNone" type="radio" name="topcoat" checked>
+                <div class="topcoat-radio-button__checkmark"></div>
+                None
+                <input id="clippingStencil" type="radio" name="topcoat">
+                <div class="topcoat-radio-button__checkmark"></div>
+                Stencil
+            </label>
+        </div>
+    </div>
+
+    <div class="row"><!-- Visible clipper -->
+        <div class="col1">
+            <p>Vis. clipper:</p>
+        </div>
+        <div class="col2">
+            <label class="topcoat-switch">
+                <input id="clipperVisible" type="checkbox" class="topcoat-switch__input" checked>
+                <div class="topcoat-switch__toggle"></div>
+            </label>
+        </div>
+        
+        <div class="col1">
+        </div>
+        
+    </div>
+
+    <div class="row"><!-- Inverted clipper -->
+        <div class="col1">
+            <p>Inv. clipper:</p>
+        </div>
+        <div class="col2">
+            <label class="topcoat-switch">
+                <input id="clipperInverted" type="checkbox" class="topcoat-switch__input">
+                <div class="topcoat-switch__toggle"></div>
+            </label>
+        </div>
+    </div>
+
+    <div class="row font-settings"><!-- Font selector -->
+        <div class="col1">
+            <p>Font file:</p>
+        </div>
+        <div class="col2">
+            <select id="fontSelectMenu" class="fontSelector topcoat-select">
+                <option id="fontSelectorDefault" value="Default" selected>Please set font folder!</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row"><!-- Slice9 -->
+        <div class="col1">
+            <p>Slice9:</p>
+        </div>
+        <div class="col2">
+            <div class="col33">
+                <input class="topcoat-text-input slice9 margin-top" id="slice1Field" placeholder="Left" type="text" value="">
+            </div>
+            <div class="col33">
+                <div class="row50">
+                    <input class="topcoat-text-input slice9" id="slice2Field" placeholder="Top" type="text" value="">
+                </div>
+                <div class="row50">
+                    <input class="topcoat-text-input slice9" id="slice4Field" placeholder="Bottom" type="text" value="">
+                </div>
+            </div>
+            <div class="col33">
+                <input class="topcoat-text-input slice9 margin-top" id="slice3Field" placeholder="Right" type="text" value="">
+            </div>
+        </div>
+    </div>
+
+    <div class="row padding-top"><!-- Toggle button -->
+        <button class="topcoat-icon-button--large" id="toggleButton">
+            Settings
+        </button>
+    </div>
+
+    <div class="row path-settings"><!-- Folders -->
+        <p class="title-font title-project color-orange">Project Folder</p>
+    </div>
+
+    <div class="row-flex path-settings width100">
+        <button class="topcoat-button file-browse-button" id="projectButton">...</button>
+        <input class="topcoat-text-input file-path-field" id="projectField" placeholder="Absolute path to project folder" type="text" value="">
+    </div>
+
+    <div class="row path-settings"><!-- Folders -->
+        <p class="title-font title-folders color-fresh-mint">Files and Sub-folders</p>
+    </div>
+
+    <div class="row-flex path-settings"><!-- Atlas file -->
+        <div class="col1 col25">
+            <p>Atlas:</p>
+        </div>
+        <div class="col2 col75">
+            <div class="row-flex">
+                <button class="topcoat-button file-browse-button" id="atlasButton">...</button>
+                <input class="topcoat-text-input file-path-field" id="atlasFileField" placeholder="Ex: main/atlases/UI.atlas" type="text" value="">
+            </div>
+        </div>
+    </div>
+
+    <div class="row-flex path-settings"><!-- GUI file -->
+        <div class="col1 col25">
+            <p>GUI:</p>
+        </div>
+        <div class="col2 col75">
+            <div class="row-flex">
+                <button class="topcoat-button file-browse-button" id="guiButton">...</button>
+                <input class="topcoat-text-input file-path-field" id="guiFileField" placeholder="Ex: main/GUI/menu.gui" type="text" value="">
+            </div>
+        </div>
+    </div>
+
+    <div class="row-flex path-settings"><!-- Fonts folder -->
+        <div class="col1 col25">
+            <p>Fonts:</p>
+        </div>
+        <div class="col2 col75">
+            <div class="row-flex">
+                <button class="topcoat-button file-browse-button" id="fontsButton">...</button>
+                <input class="topcoat-text-input file-path-field" id="fontsField" placeholder="Ex: main/fonts" type="text" value="">
+            </div>
+        </div>
+    </div>
+
+    <div class="row-flex path-settings"><!-- Images folder -->
+        <div class="col1 col25">
+            <p>Images:</p>
+        </div>
+        <div class="col2 col75">
+            <div class="row-flex">
+                <button class="topcoat-button file-browse-button" id="imagesButton">...</button>
+                <input class="topcoat-text-input file-path-field" id="imagesField" placeholder="Ex: main/images" type="text" value="">
+            </div>
+        </div>
+    </div>
+
+    <div class="row path-settings"><!-- Atlas properties -->
+        <p class="title-font title-atlas color-happy-pink">Atlas Properties</p>
+    </div>
+
+    <div class="row no-margin-top path-settings"><!-- Atlas margin, bleeding and padding -->
+        <div class="col33">
+            <p>Margin:</p>
+            <input class="topcoat-text-input atlas-field" id="marginField" placeholder="0" type="text" value="">
+        </div>
+        <div class="col33">
+            <p>Bleeding:</p>
+            <input class="topcoat-text-input atlas-field" id="bleedingField" placeholder="0" type="text" value="">
+        </div>
+        <div class="col33">
+            <p>Padding:</p>
+            <input class="topcoat-text-input atlas-field" id="paddingField" placeholder="0" type="text" value="">
+        </div>
+    </div>
+
+    <div class="row path-settings"><!-- Append to existing atlas -->
+        <div class="col1 width70">
+            <p>Append to existing atlas file?</p>
+        </div>
+        <div style="float: right;">
+            <label class="topcoat-switch">
+                <input id="atlasAppend" type="checkbox" class="topcoat-switch__input">
+                <div class="topcoat-switch__toggle switch-label-atlas"></div>
+            </label>
+        </div>
+    </div>
+
+    <div class="row"><!-- Export button -->
+        <button class="topcoat-icon-button--large width100" id="exportButton">
+            <img src="img/title.png" id="exportImg">
+        </button>
+    </div>
+
+    <div class="row">
+        <p id="version"><!-- Version -->
+            Version 1.1
+        </p>
+    </div>
+    <!-- Auto-refresh (layer metadata) - Debug only
+    <div class="row padding-top">
+        <div class="col1">
+            <p>Auto-refresh:</p>
+        </div>
+        <div class="col2">
+            <label class="topcoat-switch">
+                <input id="refresh" type="checkbox" class="topcoat-switch__input">
+                <div class="topcoat-switch__toggle"></div>
+            </label>
+        </div>
+    </div>
+    -->
+
+</div><!-- content div end -->
+
+<!-- These have to be loaded here in the body and they need to be in this particular order!!
+<script src="js/libs/CSInterface-5.2.0.js"></script> - CEP
+<script src="js/libs/jquery-2.2.4.min.js"></script> jQuery - Fails for PS CC 2015.1 -->
+<script src="js/libs/CSInterface-6.1.0.js"></script>
+<script src="js/libs/jquery-2.0.2.min.js"></script>
+<script src="js/themeManager.js"></script>
+<script src="js/main.js"></script>
+<script>$(".path-settings").hide()</script><!-- Hides settings rows -->
+
+</body>
+</html>

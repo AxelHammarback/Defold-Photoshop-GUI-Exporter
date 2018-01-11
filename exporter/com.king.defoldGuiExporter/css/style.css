@@ -1,0 +1,317 @@
+/* --- King fonts --- */
+@font-face {
+    font-family: 'sourcesans';
+    src: url('../font/SourceSansPro-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* --- Tags --- */
+body{
+}
+
+label, p{
+    font-size: 1.0em;
+}
+
+label{
+    vertical-align: bottom;
+}
+
+option{
+    letter-spacing: 0;
+    padding: 3px .563rem;
+    vertical-align: top;
+}
+
+p{
+    display: block;
+    -webkit-margin-after: 0em;
+    -webkit-margin-before: 0.5em;
+}
+
+table{
+    border: none !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+}
+
+table, td, .pivot-button{
+    padding: 0 !important;
+}
+
+
+/* --- Tag-specific classes --- */
+.test-col{
+    background-color: #c22;
+}
+
+p.color-cool-grey{
+    color: #464646;
+}
+
+p.color-warm-grey{
+    color: #AAA293;
+}
+
+p.color-sunny-yellow{
+    color: #FFC000;
+}
+
+p.color-happy-pink{
+    color: #FA4092;
+}
+p.color-fresh-mint{
+    color: #00B67D;
+}
+p.color-orange{
+    color: #FF6A00;
+}
+
+p.text-left{
+    text-align: left;
+}
+
+p.text-center{
+    text-align: center;
+}
+
+p.title-atlas{
+    margin-top: 13px !important;
+}
+
+p.title-folders{
+    margin-bottom: 5px !important;
+    margin-top: 13px !important;
+}
+
+p.title-font{
+    font-family: sourcesans;
+    font-size: 1.5em;
+    line-height: 0.5; /* Because The King font has an oversized line-height */
+}
+
+p.title-nodes{
+    margin-bottom: 2px !important;
+    margin-top: 11px !important;
+}
+
+p.title-project{
+    margin-bottom: 6px !important;
+    margin-top: 13px !important;
+}
+
+select.fontSelector{
+    /*background-color: #aa4444;*/
+    background-color: none;
+}
+
+/* --- ID's --- */
+#content{
+    display: block;
+    box-orient: horizontal;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px 6px 6px 6px; /*6px;*/
+    vertical-align: middle;
+}
+
+#exportButton{
+    margin-top: 5px; /* 5 prev*/
+    height: 48px;
+}
+
+#exportImg{
+    display: inline-block;
+    margin: auto 0 10px 0;
+    vertical-align: top;
+}
+
+#guiField, #atlas-field{
+    box-sizing: border-box;
+}
+
+#kingLogo{
+    position: absolute; /* relative prev */
+    right: 10px;
+    top: 160px;
+}
+
+#version{
+    margin-top: 0px !important;
+    opacity: 0.5;
+    text-align: center;
+}
+
+#title{
+    font-weight: bold;
+    font-size: 3.0em;
+    margin-top: 0 !important;
+    padding-bottom: 10px;
+}
+
+#toggleButton{
+    line-height: 21px;
+    max-height: 21px;
+    width: 100%;
+}
+
+#topDiv{
+    padding-top: 5px;
+    text-align: center;
+}
+
+#xAnchorMenu, #yAnchorMenu{
+    box-sizing: border-box !important;
+}
+
+
+/* --- Classes --- */
+
+.atlas, .slice9{
+    margin: 0;
+    padding: 0;
+}
+
+.atlas, .row, .row-flex, .slice9, .width100{
+    width: 100% !important;
+}
+
+.col1, .col2, .col33, .col50, .row{
+    float: left;
+}
+
+.height23{
+    height: 23px;
+}
+
+.col50, .width50{
+    width: 50% !important;
+}
+
+.width10{
+    width: 10% !important;
+}
+
+.width65{
+    width: 65% !important;
+}
+
+
+.width70{
+    width: 70% !important;
+}
+
+.width75{
+    width: 75% !important;
+}
+
+
+.atlas-field{
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 48px !important;
+}
+
+.cBoxDiv{
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.col1{
+    box-sizing: border-box;
+    padding-right: 5px;
+    text-align: right;
+    width: 32%;
+}
+
+.col2{
+    width: 68%;
+}
+
+.col25{
+    width: 25% !important;
+}
+
+.col33{
+    height: 100%;
+    position: relative;
+    text-align: center;
+    width: 33.3%;
+}
+
+.col75{
+    width: 75% !important;
+}
+
+.file-browse-button{
+    float: right;
+    width: 34px;
+}
+
+.file-path-field{
+    float: right;
+    width: 75%;
+}
+
+.margin-top{
+    margin-top: 10px;
+}
+
+.no-margin-top{
+    margin-top: 0 !important;
+}
+
+.padding-top {
+    padding-top: 10px !important;
+}
+
+.pivot-button{
+    border: 0 !important;
+    display: block !important;
+    height: 16px !important;
+    width: 16px !important;
+}
+
+.row{
+    margin-top: 1px; /* 2px prev */
+}
+
+.row50{
+    height: 50%;
+}
+
+.row-flex{
+    margin-top: 1px;
+}
+
+.slice9{
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.switch-label-atlas:before {
+    content: 'YES' !important;
+}
+
+.switch-label-atlas:after {
+    content: 'NO' !important;
+}
+
+
+/* --- Topcoat overrides --- */
+input, textarea, keygen, select, button, .topcoat-switch {
+    font-size: 1.0em !important;
+}
+
+.topcoat-icon-button--large{
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.topcoat-radio-button{
+    margin-bottom: 3px !important;
+    margin-top: 3px !important;
+}
