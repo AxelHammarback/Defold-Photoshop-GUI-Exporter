@@ -34,7 +34,7 @@ Information from each layer – such as name, size or position – will be expor
 
 ## Installation
 
-Panel is supported in Adobe Photoshop CC and later only. If you have CS6 or an earlier version installed, please speak to IT in order to upgrade to the latest version.
+**Panel is supported in Adobe Photoshop CC and later only.**
 
 1. Make sure that you have an extension installer on your computer <sup>[1]</sup>.
 
@@ -110,7 +110,7 @@ In Defold you can setup parent-child -relationship between nodes by dragging and
 
 Photoshop on the other hand has no way of parenting layers to each other: you only have layer linking and layer sets (group).
 
-In order to tell the GUI exporter about our parent-child relationships we will use Layer sets (groups) and rename these to the same name as the parent layer. To the right is an example of how to setup your workfile so that the exporter takes these relationships into account. Here we are telling the exporter that the layer kirby is parented under the layer bomberman. Now this applies regardless of where the bomberman -layer set is located, so in order to avoid confusion: Always place the layer set below the actual layer it is refering to.
+In order to tell the GUI exporter about our parent-child relationships we will use Layer sets (groups) and rename these to the same name as the parent layer. To the right is an example of how to setup your workfile so that the exporter takes these relationships into account. Here we are telling the exporter that the layer kirby is parented under the layer bomberman. Now this applies regardless of where the bomberman -layer set is located, so in order to avoid confusion: Always place the layer set below the actual layer it is referring to.
 
 ![How to make the exporter understand parenting](/images/3-parenting.png)
 
@@ -168,18 +168,18 @@ Support for multiple atlas files will not be included in this first version, but
 
 ### Smart objects / Multiple workfiles
 
-Support for Smart objects will be implemented in the future. Smart objects will give the artist the ability to setup UI templates in other workfiles (PSD).
+There is no support for Smart objects.
 
-Also keep in mind that this is an EXPORTER. Changes done to your GUI inside of Defold will not affect your work inside of Photoshop. In the future it is entirely possible that some two-way communication can be made, but for now treat this tool as a one-way-only exporter.
+Also keep in mind that this is an **EXPORTER**. Changes done to your GUI inside of Defold will not affect your work inside of Photoshop. In the future it is entirely possible that some two-way communication can be made, but for now treat this tool as a one-way-only exporter.
 
 ## Technical
-This section contains technical details on the exporter and how it works - it is primarily written for Technical Artists and as such, no lingo descriptions will appear.
+This section contains technical details on the exporter and how it works – it is primarily written for Technical Artists and as such, no lingo descriptions will appear.
 
-One way only: Remember that this is an exporter. Changes done inside of Defold after you've exported your GUI will not have an effect on your Photoshop workfile. Maybe in the future there will be possible to setup two-way communication but for now, this extension panel will be limited to exporting.
+**One way only:** Remember that this is an exporter. Changes done inside of Defold after you've exported your GUI will not have an effect on your Photoshop workfile. Maybe in the future there will be possible to setup two-way communication but for now, this extension panel will be limited to exporting.
 
-Metadata: This panel is at it's core a combination of a metadata reader/writer and exporter. Metadata is both saved per-document and per-layer. Things such as the Project Folder info or the properties of the Atlas are saved as document metadata.
+**Metadata:** This panel is at it's core a combination of a metadata reader/writer and exporter. Metadata is both saved per-document and per-layer. Things such as the Project Folder info or the properties of the Atlas are saved as document metadata.
 All layer/node properties are saved for each individual layer. LOTS of cool stuff can be done with metadata in case you have plans for developing a panel. For example: making a tool that has layer-specific guides is entirely possible!!
 
-Event listener: The metadata is retrieved and the panel UI controls are updated by a callback function that is executed by an event listener. The event listener will fire off every time there is a new layer selection. It is possible to have multiple event listeners listening in on several different events, but this a bit trickier to implement. If interested please see: https://forums.adobe.com/thread/1934925
+**Event listener:** The metadata is retrieved and the panel UI controls are updated by a callback function that is executed by an event listener. The event listener will fire off every time there is a new layer selection. It is possible to have multiple event listeners listening in on several different events, but this a bit trickier to implement. If interested please see: https://forums.adobe.com/thread/1934925
 
-Exporting: The exporting is done in three steps: First the metadata is read and compiled into a file string (JSON), Then the atlas, font and gui files are written to disk. Last, the tool will cycle through all layers one by one, duplicating the document and trim away alpha pixels around them before finally saving the image file (PNG) on disk.
+**Exporting:** The exporting is done in three steps: **First** the metadata is read and compiled into a file string (JSON), **Then** the atlas, font and gui files are written to disk. **Last**, the tool will cycle through all layers one by one, duplicating the document and trim away alpha pixels around them before finally saving the image file (PNG) on disk.
